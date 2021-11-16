@@ -8,38 +8,87 @@ body{
     padding: 10%;
 }
 
-#tobias{
-    object-fit: cover;
-    width: 30%;
-    height: auto;
-    background-repeat: no-repeat;
-    background-size: contain;
-    border-radius: 50% 50%;
-    box-shadow: 10px 20px 15px black;
+#person{
+    display: inline-block;
 }
-
-#text{
-    font-family: "Montserrat", serif;
-    color: white;
-    float: left;
-    position: relative;
-    left: 50%;
-}
-
-.white{
-    color: white;
-    margin: auto;
-
-    padding: 10px;
-}
-
-#socials{
-    margin: auto;
-    width: 50%;
-    padding: 10px;
-}
-
 
 a{
     text-decoration: none;
 }
+
+.person-section{
+    position: relative;
+}
+
+@media screen and (min-width: 550px) {
+    #tobias {
+        object-fit: cover;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: 50% 50%;
+    }
+    #tobias img {
+        width: 100%;
+    }
+    /*TODO fix text*/
+    #text {
+        font-family: "Montserrat", serif;
+        color: white;
+    }
+
+    #socials{
+        margin: auto;
+        padding: 10px;
+        position: relative;
+    }
+
+    .white{
+        color: white;
+        padding: 10px;
+        position:relative;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%)
+    }
+}
+/* on Mobile */
+@media screen and (max-width: 550px) {
+    #tobias {
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: 50% 50%;
+    }
+    #tobias img {
+        width: 100%;
+    }
+    #text {
+        padding-top: 50px;
+        font-family: "Montserrat", serif;
+        color: white;
+        position: relative;
+        text-align: center;
+    }
+
+    #socials{
+        height: 100px;
+        margin-top: -50px;
+        position: fixed;
+        bottom:0;
+        width: 100%;
+        z-index: 1;
+        text-align:center;
+    }
+
+    .white {
+        color: white;
+        padding: 10px;
+        position: static;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%)
+    }
+}
+
