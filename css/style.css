@@ -1,27 +1,75 @@
+/* imports */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 
+/* General */
 body{
     background: linear-gradient(90deg, rgba(5,0,0,1) 0%, rgba(85,10,3,1) 50%, rgba(5,0,0,1) 100%);
+    object-fit: cover;
+    font-family: "Montserrat", serif;
+    color: white;
 }
 
-#description{
-    padding: 10%;
-}
-
-#person{
-    display: inline-block;
-}
-
-a{
+.link_no_decoration{
+    color: white;
     text-decoration: none;
+}
+
+.link_decoration{
+    color: white;
+}
+
+.projects{
+    text-align: center;
+}
+
+.project_img{
+    width: 80%;
+    margin: auto;
+}
+
+.project_img img {
+    width: 100%;
+    border-radius: 10%;
+    height: auto;
+}
+
+.project_description{
+    width: 80%;
+    margin: auto;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.project_links{
+    width: 100%;
+    margin: auto;
+    padding-top: 5px;
 }
 
 .person-section{
     position: relative;
 }
 
+.title{
+    text-align: center;
+    font-size: 5rem;
+}
+
+#line{
+    width: 90%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* on Desktop */
 @media screen and (min-width: 550px) {
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
     #tobias {
+        width:100%;
         object-fit: cover;
         background-repeat: no-repeat;
         background-size: contain;
@@ -29,30 +77,34 @@ a{
     }
     #tobias img {
         width: 100%;
+        height: auto;
     }
-    /*TODO fix text*/
-    #text {
-        font-family: "Montserrat", serif;
-        color: white;
+    .description {
+        padding: 10%;
     }
 
     #socials{
         margin: auto;
-        padding: 10px;
+        padding: 50px;
         position: relative;
+        text-align: center;
     }
 
     .white{
         color: white;
         padding: 10px;
         position:relative;
-        top:50%;
-        left:50%;
-        transform:translate(-50%,-50%)
+
     }
 }
 /* on Mobile */
 @media screen and (max-width: 550px) {
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+
     #tobias {
         object-fit: cover;
         width: 100%;
@@ -64,18 +116,16 @@ a{
     #tobias img {
         width: 100%;
     }
-    #text {
+    .description {
         padding-top: 50px;
-        font-family: "Montserrat", serif;
-        color: white;
         position: relative;
         text-align: center;
     }
 
     #socials{
         height: 100px;
-        margin-top: -50px;
-        position: fixed;
+        margin-top: 50px;
+        position: relative;
         bottom:0;
         width: 100%;
         z-index: 1;
@@ -85,10 +135,8 @@ a{
     .white {
         color: white;
         padding: 10px;
-        position: static;
-        top:50%;
-        left:50%;
-        transform:translate(-50%,-50%)
+        position: relative;
+        text-align: center;
     }
 }
 
