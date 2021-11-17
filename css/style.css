@@ -9,6 +9,16 @@ body{
     color: white;
 }
 
+#header{
+    padding: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.header_title{
+    text-align: center;
+    font-size: 5rem;
+}
+
 .link_no_decoration{
     color: white;
     text-decoration: none;
@@ -63,7 +73,12 @@ body{
 
 /* on Desktop */
 @media screen and (min-width: 550px) {
-    .container{
+    .container_description{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .container_project{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
@@ -99,11 +114,15 @@ body{
 }
 /* on Mobile */
 @media screen and (max-width: 550px) {
-    .container{
+    .container_description{
         display: grid;
         grid-template-columns: 1fr;
     }
 
+    .container_project{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 
     #tobias {
         object-fit: cover;
